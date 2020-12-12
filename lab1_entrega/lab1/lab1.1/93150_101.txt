@@ -1,0 +1,97 @@
+PING
+DBSIZE
+HKEYS
+SET testkey hello
+EXISTS testkey
+DEL testkey
+DBSIZE
+SET testkey hello
+DBSIZE
+TYPE testkey
+KEYS *
+SCAN 0
+SCAN 0 MATCH "hell*"
+SCAN 0 MATCH "hello"
+SET Book:1 "Infinite Jest"
+GET Book:1
+SET Book:1:ReadAction 1
+GET Book:1:ReadAction 1
+GET Book:1:ReadAction
+INCR Book:1 ReadAction
+INCR Book:1:ReadAction
+INCRBY Book:1:ReadAction 20
+DECR Book:1:ReadAction
+DECRBY Book:1:ReadAction 5
+INCR Book:1 "Infinite Jest"
+MSET Person:2 "Kurt Vonnegut" Person:3 "Jane Austen" Person:4 "Mark Twain"
+MGET Person:2 Person:3 Person:4
+LPUSH Book:1comment "This was fun"
+LPUSH Book:1:comment "This was fun"
+LRANGE Book:1:comment 0 -1
+LPUSH Book:1:comment "Way too long!"
+LRANGE Book:1:comment 0 -1
+LPOP Book:1:comment
+RPOP Book:1:comment
+LRANGE Book:1:comment 0 -1
+RPUSH Organization:1:members Person:1 Person:2 Person:3 Person:4
+LRANGE Organization:1:members 0 -1
+LTRIM Organization:1:members 0 2
+LRANGE Organization:1:members 0 -1
+BRPOP Organization:1:members 5
+LRANGE Organization:1:members 0 -1
+GSET Book:3 name "Cats Cradle"
+HSET Book:3 name "Cats Cradle"
+HGET Book:3 name
+HMSET Book:4 name "Slaughterhouse-Five" author "Kurt Vonnegut" copyrightYear 1969 ISBN 29960763
+HMGET Book 4 author ISBN
+HMGET Book:4 author ISBN
+HGETALL Book:4
+HEXISTS Book:4 copyrgihtYear
+HEXISTS Book:4 copyrightYear
+HEXISTS Book:4 barcode
+HLEN Book:4
+HKEYS Book:4
+HVALS Book:4
+HDEL Book:4 copyrightYear
+HSET Book:4 copyrightYear 1968
+HINCRBY Book:4 copyrightYear 3
+SET Organization:5 "Beatles"
+SADD Organization:5:member Paul John George Ringo
+SMEMBERS Organization:5:member
+SISMEMBER Organization:5:member "John"
+SCARD Organizagtion:5:member
+SET Organization:6 "Wings"
+SET Organization:7 "Traveling Wilburys"
+SADD Organization:6:member Paul Linda Denny
+SADD Organization:7:member Bob George Jeff Roy Tom
+SUNION Organization:5:member Organization:6:member
+SUNION Organization:6:member Organization:7:member
+SINTER Organization:5:member Organization:6:member
+SDIFF Organization:5:member Organization:6:member
+ZADD copyrightYear 1996 Book:1 2014 Book:2 1963 Book:3
+ZADD copyrightYear 1969 Book:4
+ZRANGE copyrightYear 0 -1
+ZRANGE copyrightYear 0 -1 WITHSCORES
+ZREVRANGE copyrightYear 0 -1 WITHSCORES
+ZRANK copyrightYear Book:3
+ZRANK copyrightYear Book:1
+ZRANK copyrightYear Book:56
+ZCARD copyrightYear
+ZCOUNT copyrightYear 1900 1970 WITHSCORES
+ZCOUNT copyrightYear 1900 1970
+ZRANGEBYSCORE copyrightYear 1900 1970 WITHSCORES
+HSET Movie:345 name "Saving Mr. Banks"
+SET Movie:345:Likes 200
+MULTI
+HSET Movie:345 copyrightYear 2013
+INCR Movie:345:Likes
+EXEC
+Multi
+hset Movie:345 copyrightYear 2013
+discard
+exec
+watch Movie:345:Likes
+multi
+incr Movie:345:Likes
+exec
+exit

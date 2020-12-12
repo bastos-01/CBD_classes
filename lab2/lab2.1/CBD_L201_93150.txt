@@ -1,0 +1,126 @@
+# Lab 2.1
+
+> use mybd
+switched to db mybd
+
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+> db.movie.insert({"name": "tutorials"})
+
+> show dbs
+admin   0.000GB
+config  0.000GB
+mybd    0.000GB
+local   0.000GB        
+
+> db.dropDatabase()
+
+> db.createCollection("collection")
+{ "ok" : 1 }
+
+> show collections
+Collection
+
+> db.Collection.drop()
+true
+
+> db.users.insert({id: "0", name: "Pedro", nick: "Bastos"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({id: "1", name: "Eduardo", nick: "Edu"})
+WriteResult({ "nInserted" : 1 })
+
+> db.users.insertMany([{id: "0", name: "Pedro", nick: "Bastos"}, {id: "1", name: "Eduardo", nick: "Edu"}])
+{
+	"acknowledged" : true,
+	"insertedIds" : [
+		ObjectId("5f9700ef4f521568f7cd9804"),
+		ObjectId("5f9700ef4f521568f7cd9805")
+	]
+}
+
+> db.users.find()
+{ "_id" : ObjectId("5f96fff64f521568f7cd9802"), "id" : "0", "name" : "Pedro", "nick" : "Bastos" }
+{ "_id" : ObjectId("5f9700714f521568f7cd9803"), "id" : "1", "name" : "Eduardo", "nick" : "Edu" }
+{ "_id" : ObjectId("5f9700ef4f521568f7cd9804"), "id" : "0", "name" : "Pedro", "nick" : "Bastos" }
+{ "_id" : ObjectId("5f9700ef4f521568f7cd9805"), "id" : "1", "name" : "Eduardo", "nick" : "Edu" }
+
+> db.users.find().pretty()
+{
+	"_id" : ObjectId("5f96fff64f521568f7cd9802"),
+	"id" : "0",
+	"name" : "Pedro",
+	"nick" : "Bastos"
+}
+{
+	"_id" : ObjectId("5f9700714f521568f7cd9803"),
+	"id" : "1",
+	"name" : "Eduardo",
+	"nick" : "Edu"
+}
+{
+	"_id" : ObjectId("5f9700ef4f521568f7cd9804"),
+	"id" : "0",
+	"name" : "Pedro",
+	"nick" : "Bastos"
+}
+{
+	"_id" : ObjectId("5f9700ef4f521568f7cd9805"),
+	"id" : "1",
+	"name" : "Eduardo",
+	"nick" : "Edu"
+}
+
+> db.users.update({'name':'Eduardo'}, {$set:{'name': 'Francisco'}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+> db.users.remove({'name': 'Francisco'})
+WriteResult({ "nRemoved" : 1 })
+
+> db.users.createIndex({"name":1})
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 1,
+	"numIndexesAfter" : 2,
+	"ok" : 1
+}
+
+> db.users.dropIndex({"name":1})
+{ "nIndexesWas" : 2, "ok" : 1 }
+
+> db.users.createIndex({"name":1})
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 1,
+	"numIndexesAfter" : 2,
+	"ok" : 1
+}
+
+> db.users.getIndexes()
+[
+	{
+		"v" : 2,
+		"key" : {
+			"_id" : 1
+		},
+		"name" : "_id_"
+	},
+	{
+		"v" : 2,
+		"key" : {
+			"name" : 1
+		},
+		"name" : "name_1"
+	}
+]
+
+> db.users.aggregate([{$group: {_id: "$name", num_pessoas: {$sum : 1}}}])
+{ "_id" : "Eduardo", "num_pessoas" : 1 }
+{ "_id" : "Pedro", "num_pessoas" : 2 }
+
+> db.posts.mapReduce(function() {emit(this.user_id, 1); }, function(key,values) {return Araay.sum(values)}, {query:{status:"active"}, out: "post_total"})
+{ "result" : "post_total", "ok" : 1 }
+
+
