@@ -2,6 +2,8 @@
 
 ## Video Sharing System
 
+### a)
+
 ### Creating a keyspace
 	> create keyspace videos with replication = {'class': 'SimpleStrategy', 'replication_factor' : 3};
 	> use videos;
@@ -34,6 +36,22 @@
           ... date timestamp,
           ... author text
           ... );
+
+	> create table comment_by_time(
+			... author text, 
+			... videoId int, 
+			... comment text, 
+			... comment_date timestamp,  
+			... primary key(author, comment_date)) 
+			... with clustering order by (comment_date desc);
+			
+	> create table comment_by_video(
+			... author text, 
+			... videoId int, 
+			... comment text, 
+			... comment_date timestamp,  
+			... primary key(videoId, comment_date)) 
+			... with clustering order by (comment_date desc);
           
 #### Followers
 	> create table follower(
@@ -59,6 +77,8 @@
           ...
           ... primary key (videoId, rating)
           ... );
+
+### b)
 
 ### Inserting data
 
@@ -88,6 +108,9 @@
 	> insert into video (id, author, name, description, tag, upload_date) values (11, 'bastitos', 'Sumás de Ananol', 'Letras trocadas porque é divertido!', {'funny', 'joke', 'comedian', 'nice'}, '2015-12-11');
 	
 #### Comment
+	
+	comment
+	
 	> insert into comment (id, videoId, text, date, author) values (1, 1, 'Nice Video bro', toTimestamp(now()), 'eduzito');
 	> insert into comment (id, videoId, text, date, author) values (2, 6, 'Wtf dude n fui eu', toTimestamp(now()), 'Direitinho');
 	> insert into comment (id, videoId, text, date, author) values (3, 4, 'Mano as contas estão mal feitas', toTimestamp(now()), 'pintinho');
@@ -98,6 +121,37 @@
 	> insert into comment (id, videoId, text, date, author) values (8, 6, 'Foste sim Direito', toTimestamp(now()), 'eduzito');
 	> insert into comment (id, videoId, text, date, author) values (9, 11, 'Mano incrível essa troca de palavras', toTimestamp(now()), 'hugofpaiva');
 	> insert into comment (id, videoId, text, date, author) values (10, 10, 'Mano como é que sabes tantas coisas?', toTimestamp(now()), 'eduzito');
+	
+	
+	comment_by_time
+	
+	> insert into comment_by_time (author, videoId, comment, comment_date) values ('eduzito', 1, 'Nice Video bro', toTimestamp(now()));
+	> insert into comment_by_time (author, videoId, comment, comment_date) values ('Direitinho', 6, 'Wtf dude n fui eu', toTimestamp(now()));
+	> insert into comment_by_time (author, videoId, comment, comment_date) values ('pintinho', 4, 'Mano as contas estão mal feitas', toTimestamp(now()));
+	> insert into comment_by_time (author, videoId, comment, comment_date) values ('dxogo', 1, 'TEM BUE PIADA AHAHAHAH', toTimestamp(now()));
+	> insert into comment_by_time (author, videoId, comment, comment_date) values ('valente', 9, 'Tas sempre na biblio?', toTimestamp(now()));
+	> insert into comment_by_time (author, videoId, comment, comment_date) values ('danielzito', 8, 'Bro és um craque ensina-me', toTimestamp(now()));
+	> insert into comment_by_time (author, videoId, comment, comment_date) values ('bastitos', 5, 'Mano como é que consegues explica-me IA', toTimestamp(now()));
+	> insert into comment_by_time (author, videoId, comment, comment_date) values ('eduzito', 6, 'Foste sim Direito', toTimestamp(now()));
+	> insert into comment_by_time (author, videoId, comment, comment_date) values ('hugofpaiva', 11, 'Mano incrível essa troca de palavras', toTimestamp(now()));
+	> insert into comment_by_time (author, videoId, comment, comment_date) values ('eduzito', 10, 'Mano como é que sabes tantas coisas?', toTimestamp(now()));
+	
+	
+	comment_by_video
+	
+	> insert into comment_by_video (author, videoId, comment, comment_date) values ('eduzito', 1, 'Nice Video bro', toTimestamp(now()));
+	> insert into comment_by_video (author, videoId, comment, comment_date) values ('Direitinho', 6, 'Wtf dude n fui eu', toTimestamp(now()));
+	> insert into comment_by_video (author, videoId, comment, comment_date) values ('pintinho', 4, 'Mano as contas estão mal feitas', toTimestamp(now()));
+	> insert into comment_by_video (author, videoId, comment, comment_date) values ('dxogo', 1, 'TEM BUE PIADA AHAHAHAH', toTimestamp(now()));
+	> insert into comment_by_video (author, videoId, comment, comment_date) values ('valente', 9, 'Tas sempre na biblio?', toTimestamp(now()));
+	> insert into comment_by_video (author, videoId, comment, comment_date) values ('danielzito', 8, 'Bro és um craque ensina-me', toTimestamp(now()));
+	> insert into comment_by_video (author, videoId, comment, comment_date) values ('bastitos', 5, 'Mano como é que consegues explica-me IA', toTimestamp(now()));
+	> insert into comment_by_video (author, videoId, comment, comment_date) values ('eduzito', 6, 'Foste sim Direito', toTimestamp(now()));
+	> insert into comment_by_video (author, videoId, comment, comment_date) values ('hugofpaiva', 11, 'Mano incrível essa troca de palavras', toTimestamp(now()));
+	> insert into comment_by_video (author, videoId, comment, comment_date) values ('eduzito', 10, 'Mano como é que sabes tantas coisas?', toTimestamp(now()));
+	> insert into comment_by_video (author, videoId, comment, comment_date) values ('eduzito', 1, 'Muito bom', toTimestamp(now()));
+	> insert into comment_by_video (author, videoId, comment, comment_date) values ('bastitos', 1, 'Que top!', toTimestamp(now()));
+
 	
 #### Followers
 	> insert into follower (video_id, user) values (1, {'eduzito', 'hugofpaiva', 'danielzito'});
@@ -153,6 +207,87 @@
 	> insert into rating (videoId, rating) values (11, 4);
 	> insert into rating (videoId, rating) values (11, 2);
 
-	
+### JSON data
 
+### CQL DML statements
+
+	> select json * from user;
+	> select json * from video;
+	> select json * from comment;
+	> select json * from comment_by_time;
+	> select json * from comment_by_video;
+	> select json * from follower;
+	> select json * from event;
+	> select json * from rating;
+
+### c)
+
+#### Querie 7
+	> select * from video where author='bastitos' allow filtering;
+	
+![](prints/querie7.png)
+
+#### Querie 8
+	> select * from comment_by_time where author='eduzito';
+	
+![](prints/querie8.png)
+
+#### Querie 9
+	> select * from comment_by_video where videoId=6;
+	
+![](prints/querie9.png)
+
+#### Querie 10
+	> select avg(rating) as avg_rating, count(rating) as number_votes from rating where videoid=1;
+	
+![](prints/querie10.png)
+
+### d)
+
+#### Querie 1
+	> select * from comment_by_video where videoId=1 limit 3;
+	
+![](prints/querie1d.png)
+
+#### Querie 2
+	> select name, tag from video where id=4;
+	
+![](prints/querie2d.png)
+
+#### Querie 3
+	> select * from video where tag contains 'work' allow filtering;
+	
+![](prints/querie3d.png)
+
+#### Querie 4
+	> select * from event where author='eduzito' and video_id=8 limit 5;
+	
+![](prints/querie4d.png)
+
+#### Querie 5
+	> select * from video where author='bastitos' and upload_date > '2010-06-03' and upload_date < '2015-12-12'  allow filtering;
+	
+![](prints/querie5d.png)
+
+#### Querie 6
+	Can´t be done. Without a partition key, we cannot have the clustering column ordering.
+	
+#### Querie 7
+	> select * from follower where video_id=7;
+	
+![](prints/querie7d.png)
+
+#### Querie 8
+	Joins are not possible in Cassandra. To do this, we would need to create a new table.
+	
+#### Querie 9
+	Can´t be done, same reason as querie 6.
+	
+#### Querie 10
+	Couldn't find a way to make this work.
+	
+#### Querie 11
+	Same as querie 8. There is a need to create another table.
+
+	
 	
