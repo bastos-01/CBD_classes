@@ -1,9 +1,5 @@
 import com.datastax.oss.driver.api.core.CqlSession;
 import com.datastax.oss.driver.api.core.cql.*;
-import java.net.InetSocketAddress;
-import java.sql.Time;
-import java.util.Date;
-import java.sql.Timestamp;
 
 public class teste {
 
@@ -28,14 +24,6 @@ public class teste {
             deleteUser(session, "JavaInsert");
             System.out.println("Checking if user was deleted: ");
             getUser(session, "JavaInsert");
-
-
-
-            //updateUser(session, 36, "Jones");
-
-            //getUser(session, "Jones");
-
-            //deleteUser(session, "Jones");
 
         }
     }
