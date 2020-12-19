@@ -112,18 +112,18 @@
 	
 #### Exam
 
-	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Joaquim': '2025-12-11', 'André': '2024-11-06'}, 'Hernani', 'Both Aproved');
-	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Eduardo': '2026-01-05', 'Hugo': '2030-12-12'}, 'Hernani', 'Both not aproved');
-	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Joaquim': '2025-12-11', 'André': '2024-11-06'}, 'Hernani', 'Both Aproved');
-	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Joaquim': '2025-12-11', 'André': '2024-11-06'}, 'Hernani', 'Both Aproved');
-	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Joaquim': '2025-12-11', 'André': '2024-11-06'}, 'Hernani', 'Both Aproved');
-	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Joaquim': '2025-12-11', 'André': '2024-11-06'}, 'Hernani', 'Both Aproved');
-	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Joaquim': '2025-12-11', 'André': '2024-11-06'}, 'Hernani', 'Both Aproved');
-	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Joaquim': '2025-12-11', 'André': '2024-11-06'}, 'Hernani', 'Both Aproved');
-	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Joaquim': '2025-12-11', 'André': '2024-11-06'}, 'Hernani', 'Both Aproved');
-	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Joaquim': '2025-12-11', 'André': '2024-11-06'}, 'Hernani', 'Both Aproved');
-	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Joaquim': '2025-12-11', 'André': '2024-11-06'}, 'Hernani', 'Both Aproved');
-	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Joaquim': '2025-12-11', 'André': '2024-11-06'}, 'Hernani', 'Both Aproved');
+	> insert into	 exam(id, student_licence, examiner, status) values (1, {'Joaquim': '2025-12-11', 'André': '2024-11-06'}, 'Hernani', 'Joaquim: aproved, André: not aproved');
+	> insert into	 exam(id, student_licence, examiner, status) values (2, {'Eduardo': '2026-01-05', 'Hugo': '2030-12-12'}, 'Hernani', 'Both not aproved');
+	> insert into	 exam(id, student_licence, examiner, status) values (3, {'Eduardo': '2026-01-05', 'Hugo': '2030-12-12'}, 'António', 'Both Aproved');
+	> insert into	 exam(id, student_licence, examiner, status) values (4, {'Daniel': '2021-01-01', 'André': '2024-11-06'}, 'Peixinho', 'Daniel: not aproved, André: aproved');
+	> insert into	 exam(id, student_licence, examiner, status) values (5, {'Daniel': '2021-01-01', 'Valente': '2022-01-01'}, 'Peixinho', 'Both Aproved');
+	> insert into	 exam(id, student_licence, examiner, status) values (6, {'Direito': '2023-02-03', 'Gonçalo': '2024-02-03'}, 'Hugo', 'Both not aproved');
+	> insert into	 exam(id, student_licence, examiner, status) values (7, {'Direito': '2023-02-03', 'Gonçalo': '2024-02-03'}, 'Hugo', 'Direito: aproved, Gonçalo: not aproved');
+	> insert into	 exam(id, student_licence, examiner, status) values (8, {'Gonçalo': '2024-02-03', 'Gil': '2026-10-25'}, 'Hugo', 'Gonçalo: Aproved, Gil: not aproved');
+	> insert into	 exam(id, student_licence, examiner, status) values (9, {'Gil': '2026-10-25', 'Vitor': '2034-01-12'}, 'Hugo', 'Gil: aproved, Vitor: not aproved');
+	> insert into	 exam(id, student_licence, examiner, status) values (10, {'Vitor': '2034-01-12', 'Zé': '2019-02-11'}, 'Mico', 'Both not aproved');
+	> insert into	 exam(id, student_licence, examiner, status) values (11, {'Vitor': '2034-01-12', 'Zé': '2019-02-11'}, 'Mico', 'Vitor: aproved, zé: not aproved');
+	> insert into	 exam(id, student_licence, examiner, status) values (12, {'Zé': '2019-02-11', 'Tomás': '2022-09-08'}, 'Manuela', 'Both Aproved');
 	
 	
 	
