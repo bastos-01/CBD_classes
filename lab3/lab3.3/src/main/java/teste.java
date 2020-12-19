@@ -1,5 +1,6 @@
 import com.datastax.oss.driver.api.core.CqlSession;
 import com.datastax.oss.driver.api.core.cql.*;
+import java.sql.Timestamp;
 
 public class teste {
 
