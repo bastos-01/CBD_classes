@@ -91,6 +91,8 @@
 #### School
 
 	> insert into school(id, name, cities, examiners, students) values (1, 'nova de aveiro', ['Aveiro', 'Agueda'], ['Hernani', 'Zé', 'Hugo'], ['Joaquim', 'André', 'Eduardo']);
+	> insert into school(id, name, cities, examiners, students) values (1, 'velha de agueda', ['Aveiro', 'Agueda', 'Coimbra'], ['Hernani', 'Hugo'], ['André', 'Eduardo']);
+	> insert into school(id, name, cities, examiners, students) values (1, 'Cova', ['Coimbra'], ['Hernani'], ['André', 'Eduardo', 'Zé', 'Daniel']);
 	> insert into school(id, name, cities, examiners, students) values (2, 'Miguel de Agueda', ['Aveiro', 'Agueda', 'Leiria', 'Oliveira do Bairro'], ['Gil', 'Daniel'], ['Hugo']);
 	> insert into school(id, name, cities, examiners, students) values (3, 'Autofama', ['Agueda', 'Coimbra'], ['António', 'Peixinho', 'Zezito', 'Jennifer Lopez', 'Manuela'], ['André', 'Valente', 'Direito', 'Vitor', 'Zé']);
 	> insert into school(id, name, cities, examiners, students) values (4, 'Costa Verde', ['Espinho', 'Lisboa'], ['Teixeira', 'Mico'], ['Tomás', 'Daniel', 'Gonçalo']);
@@ -153,8 +155,31 @@
 	> delete from vehicle where name='Ibiza';
 	> delete disabilities from student where name='Direito';
 	
-	
+## Queries
 
+#### Get the schools that have 1 or more students named 'Andr':
+	
+	> select * from school where students contains 'Andr';
+	
+![](images/querie1.png)
+
+#### Get the exams that have the student 'Daniel':
+
+	> select * from exam where student_licence contains key 'Daniel' allow filtering;
+	
+![](images/querie2.png)
+
+#### Get first 2 vehicles that have the name 'm1':
+
+	> select * from vehicle where name='m1' limit 2;
+	
+![](images/querie3.png)
+
+#### Get schools with id 1 and order them in reverse:
+
+	> select * from school where id=1 order by name desc;
+	
+![](images/querie4.png)
 	
 	
 	
