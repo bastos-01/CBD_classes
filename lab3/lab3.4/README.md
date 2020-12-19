@@ -125,7 +125,7 @@
 	> insert into	 exam(id, student_licence, examiner, status) values (11, {'Vitor': '2034-01-12', 'Zé': '2019-02-11'}, 'Mico', 'Vitor: aproved, zé: not aproved');
 	> insert into	 exam(id, student_licence, examiner, status) values (12, {'Zé': '2019-02-11', 'Tomás': '2022-09-08'}, 'Manuela', 'Both Aproved');
 	
-	
+
 	
 	
 	
