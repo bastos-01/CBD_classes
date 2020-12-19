@@ -124,6 +124,35 @@
 	> insert into	 exam(id, student_licence, examiner, status) values (10, {'Vitor': '2034-01-12', 'Zé': '2019-02-11'}, 'Mico', 'Both not aproved');
 	> insert into	 exam(id, student_licence, examiner, status) values (11, {'Vitor': '2034-01-12', 'Zé': '2019-02-11'}, 'Mico', 'Vitor: aproved, zé: not aproved');
 	> insert into	 exam(id, student_licence, examiner, status) values (12, {'Zé': '2019-02-11', 'Tomás': '2022-09-08'}, 'Manuela', 'Both Aproved');
+
+## Indexes
+
+#### Index on table 'school' in column 'students'
+
+	> create index students on school(students);
+	
+#### Index on table 'exam' in column 'student_licence'
+
+	> create index licences on exam(student_licence);
+	
+## UPDATES and DELETES
+
+#### Updates
+
+	> update student set disabilities = disabilities + {'Asma'} where name='Joaquim';
+	> update school set cities = ['Faro', 'Braga'], students = students + ['Simon'] where id = 1 and name='nova de aveiro';
+	> update exam set student_licence['Daniel'] = '2022-01-01' where id=5 and examiner='Peixinho';
+	> update exam set studen_licence = student_licence + {'Zé': '2025-01-01'} where id=1 and examiner='Hernani';
+	> update exam set student_licence = student_licence - {'Zé'} where id=1 and examiner='Hernani';
+	
+#### Deletes
+
+	> delete student_licence['Vitor'] from exam where id=10 and examiner='Mico';
+	> delete cities[1] from school where id=1 and name='nova de aveiro';
+	> delete cities[0], cities[1], examiners[0] from school where id=2 and name='Miguel de Agueda';
+	> delete from vehicle where name='Ibiza';
+	> delete disabilities from student where name='Direito';
+	
 	
 
 	
