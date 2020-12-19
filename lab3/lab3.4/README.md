@@ -180,11 +180,42 @@
 	> select * from school where id=1 order by name desc;
 	
 ![](images/querie4.png)
+
+#### Get all exams from examiner 'Hugo':
+
+	> select * from exam where examiner = 'Hugo' allow filtering;
 	
+![](images/querie5.png)
+
+#### Get all schools from 'Coimbra':
+
+	> select * from school where cities contains 'Coimbra' allow filtering;
 	
+![](images/querie6.png)
+
+#### Get students with the licence after '2024-01-01':
+
+	> select * from student where licence > '2024-01-01' allow filtering;
 	
+![](images/querie7.png)
+
+#### Get exams that both students failed:
+
+	> select * from exam where status = 'Both not aproved' allow filtering;
 	
+![](images/querie8.png)
+
+#### Get last school that bought an 'm1':
+
+	>  select * from vehicle where name='m1' order by brand desc limit 1;
 	
+![](images/querie9.png)
+
+#### Get all Goncalo's exams with the examiner 'Hugo':
+	
+	> select * from exam where examiner='Hugo' and student_licence contains key 'Gonalo'  allow filtering;
+	
+![](images/querie10.png)
 	
 	
 	
