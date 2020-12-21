@@ -1,0 +1,48 @@
+Resource: file:/Users/hacker/Desktop/UA/CBD/CBD_classes/lab3/lab3.5/restaurants.json
+Position: 1
+Source: {"address":{"building":"1007","coord":[-73.856077,40.848447],"rua":"Morris Park Ave","zipcode":"10462"},"localidade":"Bronx","gastronomia":"Bakery","grades":[{"date":{"$date":1393804800000},"grade":"A","score":2},{"date":{"$date":1378857600000},"grade":"A","score":6},{"date":{"$date":1358985600000},"grade":"A","score":10},{"date":{"$date":1322006400000},"grade":"A","score":9},{"date":{"$date":1299715200000},"grade":"B","score":14}],"nome":"Morris Park Bake Shop","restaurant_id":"30075445"}
+com.datastax.oss.dsbulk.mapping.InvalidMappingException: Required field building (mapped to column building) was missing from record. Please remove it from the mapping or set schema.allowMissingFields to true.
+	at com.datastax.oss.dsbulk.mapping.InvalidMappingException.missingField(InvalidMappingException.java:46)
+	at com.datastax.oss.dsbulk.workflow.commons.schema.DefaultRecordMapper.ensureAllFieldsPresent(DefaultRecordMapper.java:211)
+	at com.datastax.oss.dsbulk.workflow.commons.schema.DefaultRecordMapper.map(DefaultRecordMapper.java:122)
+	at java.base/java.lang.Thread.run(Thread.java:829) [18 skipped]
+
+Resource: file:/Users/hacker/Desktop/UA/CBD/CBD_classes/lab3/lab3.5/restaurants.json
+Position: 129
+Source: {"address":{"building":"331","coord":[-73.87786539999999,40.8724377],"rua":"East  204 Street","zipcode":"10467"},"localidade":"Bronx","gastronomia":"Irish","grades":[{"date":{"$date":1409011200000},"grade":"A","score":10},{"date":{"$date":1395792000000},"grade":"B","score":23},{"date":{"$date":1378857600000},"grade":"A","score":13},{"date":{"$date":1355788800000},"grade":"B","score":27},{"date":{"$date":1319068800000},"grade":"A","score":13}],"nome":"Mcdwyers Pub","restaurant_id":"40365893"}
+com.datastax.oss.dsbulk.mapping.InvalidMappingException: Required field building (mapped to column building) was missing from record. Please remove it from the mapping or set schema.allowMissingFields to true.
+	at com.datastax.oss.dsbulk.mapping.InvalidMappingException.missingField(InvalidMappingException.java:46)
+	at com.datastax.oss.dsbulk.workflow.commons.schema.DefaultRecordMapper.ensureAllFieldsPresent(DefaultRecordMapper.java:211)
+	at com.datastax.oss.dsbulk.workflow.commons.schema.DefaultRecordMapper.map(DefaultRecordMapper.java:122)
+	at java.base/java.lang.Thread.run(Thread.java:829) [18 skipped]
+
+Resource: file:/Users/hacker/Desktop/UA/CBD/CBD_classes/lab3/lab3.5/restaurants.json
+Position: 130
+Source: {"address":{"building":"26","coord":[-73.9983,40.715051],"rua":"Pell Street","zipcode":"10013"},"localidade":"Manhattan","gastronomia":"Café/Coffee/Tea","grades":[{"date":{"$date":1404950400000},"grade":"A","score":10},{"date":{"$date":1373587200000},"grade":"A","score":10},{"date":{"$date":1360540800000},"grade":"A","score":9},{"date":{"$date":1357776000000},"grade":"P","score":4},{"date":{"$date":1343347200000},"grade":"A","score":12},{"date":{"$date":1330300800000},"grade":"A","score":11},{"d...
+com.datastax.oss.dsbulk.mapping.InvalidMappingException: Required field building (mapped to column building) was missing from record. Please remove it from the mapping or set schema.allowMissingFields to true.
+	at com.datastax.oss.dsbulk.mapping.InvalidMappingException.missingField(InvalidMappingException.java:46)
+	at com.datastax.oss.dsbulk.workflow.commons.schema.DefaultRecordMapper.ensureAllFieldsPresent(DefaultRecordMapper.java:211)
+	at com.datastax.oss.dsbulk.workflow.commons.schema.DefaultRecordMapper.map(DefaultRecordMapper.java:122)
+	at java.base/java.lang.Thread.run(Thread.java:829) [18 skipped]
+
+Resource: file:/Users/hacker/Desktop/UA/CBD/CBD_classes/lab3/lab3.5/restaurants.json
+Position: 131
+Source: {"address":{"building":"25541","coord":[-73.70902579999999,40.7276012],"rua":"Jamaica Avenue","zipcode":"11001"},"localidade":"Queens","gastronomia":"American","grades":[{"date":{"$date":1389830400000},"grade":"A","score":4},{"date":{"$date":1371686400000},"grade":"A","score":11},{"date":{"$date":1349308800000},"grade":"A","score":13},{"date":{"$date":1326153600000},"grade":"B","score":20},{"date":{"$date":1308787200000},"grade":"B","score":21}],"nome":"Nancy'S Fire Side","restaurant_id":"403659...
+com.datastax.oss.dsbulk.mapping.InvalidMappingException: Required field building (mapped to column building) was missing from record. Please remove it from the mapping or set schema.allowMissingFields to true.
+	at com.datastax.oss.dsbulk.mapping.InvalidMappingException.missingField(InvalidMappingException.java:46)
+	at com.datastax.oss.dsbulk.workflow.commons.schema.DefaultRecordMapper.ensureAllFieldsPresent(DefaultRecordMapper.java:211)
+	at com.datastax.oss.dsbulk.workflow.commons.schema.DefaultRecordMapper.map(DefaultRecordMapper.java:122)
+	at java.base/java.lang.Thread.run(Thread.java:829) [18 skipped]
+
+Resource: file:/Users/hacker/Desktop/UA/CBD/CBD_classes/lab3/lab3.5/restaurants.json
+Position: 132
+Source: {"address":{"building":"21","coord":[-73.9990337,40.7143954],"rua":"Mott Street","zipcode":"10013"},"localidade":"Manhattan","gastronomia":"Chinese","grades":[{"date":{"$date":1406505600000},"grade":"B","score":27},{"date":{"$date":1384819200000},"grade":"B","score":20},{"date":{"$date":1367280000000},"grade":"A","score":11},{"date":{"$date":1350345600000},"grade":"B","score":24},{"date":{"$date":1336348800000},"grade":"A","score":12}],"nome":"Hop Kee Restaurant","restaurant_id":"40365942"}
+com.datastax.oss.dsbulk.mapping.InvalidMappingException: Required field building (mapped to column building) was missing from record. Please remove it from the mapping or set schema.allowMissingFields to true.
+	at com.datastax.oss.dsbulk.mapping.InvalidMappingException.missingField(InvalidMappingException.java:46)
+	at com.datastax.oss.dsbulk.workflow.commons.schema.DefaultRecordMapper.ensureAllFieldsPresent(DefaultRecordMapper.java:211)
+	at com.datastax.oss.dsbulk.workflow.commons.schema.DefaultRecordMapper.map(DefaultRecordMapper.java:122)
+	at java.base/java.lang.Thread.run(Thread.java:829) [18 skipped]
+
+Resource: file:/Users/hacker/Desktop/UA/CBD/CBD_classes/lab3/lab3.5/restaurants.json
+Position: 133
+Source: {"address":{"building":"1","coord":[-74.0049219,40.720699],"rua":"Lispenard Street","zipcode":"10013"},"localidade":"Manhattan","gastronomia":"American","grades":[{"date":{"$date":1412640000000},"grade":"B","score":18},{"date":{"$date":1398988800000},"grade":"A","score":8},{"date":{"$date":1380758400000},"grade":"B","score":23},{"date":{"$date":1347840000000},"grade":"A","score":12},{"date":{"$date":1336435200000},"grade":"A","score":12},{"date":{"$date":1323734400000},"grade":"A","score":13}],"...

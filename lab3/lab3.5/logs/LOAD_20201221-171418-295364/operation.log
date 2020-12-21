@@ -1,0 +1,25 @@
+2020-12-21 17:14:18 INFO  Operation directory: /Users/hacker/Desktop/UA/CBD/CBD_classes/lab3/lab3.5/logs/LOAD_20201221-171418-295364
+2020-12-21 17:14:20 ERROR Operation LOAD_20201221-171418-295364 aborted: Too many errors, the maximum allowed is 100.
+com.datastax.oss.dsbulk.workflow.api.error.TooManyErrorsException: Too many errors, the maximum allowed is 100.
+	at com.datastax.oss.dsbulk.workflow.commons.log.LogManager.maybeTriggerOnError(LogManager.java:785)
+	at com.datastax.oss.dsbulk.workflow.commons.log.LogManager.lambda$newUnmappableStatementsHandler$7(LogManager.java:300)
+	at java.base/java.lang.Thread.run(Thread.java:829) [20 skipped]
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at com.datastax.oss.dsbulk.workflow.load.LoadWorkflow.execute(LoadWorkflow.java:220) [2 skipped]
+		at com.datastax.oss.dsbulk.runner.WorkflowThread.run(WorkflowThread.java:53)
+2020-12-21 17:14:20 INFO  Records: total: 104, successful: 0, failed: 104
+2020-12-21 17:14:20 INFO  Batches: total: 0, size: 0.00 mean, 0 min, 0 max
+2020-12-21 17:14:20 INFO  Memory usage: used: 20 MB, free: 107 MB, allocated: 128 MB, available: 2,048 MB, total gc count: 6, total gc time: 30 ms
+2020-12-21 17:14:20 INFO  Writes: total: 0, successful: 0, failed: 0, in-flight: 0
+2020-12-21 17:14:20 INFO  Throughput: 0 writes/second
+2020-12-21 17:14:20 INFO  Latencies: mean 0.00, 75p 0.00, 99p 0.00, 999p 0.00 milliseconds
+2020-12-21 17:14:22 INFO  Final stats:
+2020-12-21 17:14:22 INFO  Records: total: 104, successful: 0, failed: 104
+2020-12-21 17:14:22 INFO  Batches: total: 0, size: 0.00 mean, 0 min, 0 max
+2020-12-21 17:14:22 INFO  Memory usage: used: 29 MB, free: 98 MB, allocated: 128 MB, available: 2,048 MB, total gc count: 6, total gc time: 30 ms
+2020-12-21 17:14:22 INFO  Writes: total: 0, successful: 0, failed: 0, in-flight: 0
+2020-12-21 17:14:22 INFO  Throughput: 0 writes/second
+2020-12-21 17:14:22 INFO  Latencies: mean 0.00, 75p 0.00, 99p 0.00, 999p 0.00 milliseconds
+2020-12-21 17:14:22 INFO  Rejected records can be found in the following file(s): mapping.bad
+2020-12-21 17:14:22 INFO  Errors are detailed in the following file(s): mapping-errors.log
+2020-12-21 17:14:22 INFO  Last processed positions can be found in positions.txt
