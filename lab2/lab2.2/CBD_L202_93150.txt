@@ -1,5 +1,4 @@
 // NMEC: 93150
-// ACABAR
 
 #1
 db.rest.find()
