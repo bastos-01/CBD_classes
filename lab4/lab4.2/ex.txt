@@ -1,0 +1,12 @@
+// NMEC: 93150
+
+#1
+match (ator)-[:ACTED_IN]->(movie)<-[:DIRECTED]-(ator) return distinct ator.name, movie.title
+
+#2
+match (a)-[:ACTED_IN]->(m) where m.released > 2005 return collect(a.name) as atores, m.title as filme
+
+#3
+match (node1)-[]->(node2) with node1, node2, count(*) as relations where 1 < relations return node1, node2, relations
+
+#4
