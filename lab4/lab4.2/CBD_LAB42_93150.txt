@@ -1,3 +1,22 @@
 // NMEC: 93150
 
 #1
+match (ator)-[:ACTED_IN]->(movie)<-[:DIRECTED]-(ator) return distinct ator.name, movie.title
+
+#2
+match (a)-[:ACTED_IN]->(m) where m.released > 2005 return collect(a.name) as atores, m.title as filme
+
+#3
+match (node1)-[]->(node2) with node1, node2, count(*) as relations where 1 < relations return node1, node2, relations
+
+#4
+match (p1)-[:REVIEWED]->(m)<-[:REVIEWED]-(p2) return m.title as filme, p1.name as pessoa_1, p2.name as pessoa_2
+
+#5
+match (a1)-[:ACTED_IN]->(m)<-[:ACTED_IN]-(a2) with a1, a2, count(*) as numMovies where numMovies > 1 return a1.name as ator_1, a2.name as ator_2, numMovies 
+
+#6
+MATCH (a)-[:ACTED_IN]->(m) where m.title="Apollo 13" return avg(m.released - a.born) as idade_media;
+
+#7
+
