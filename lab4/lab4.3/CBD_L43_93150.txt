@@ -1,0 +1,4 @@
+load csv with headers from 'file:///git_selection.csv' as file
+merge (m: member{id:file.svn_id, name:file.real_name})
+merge (p: project{name:file.project_name})
+merge (m) -[:PARTICIPATED_IN{role:file.role_on_project}]-> (p)
