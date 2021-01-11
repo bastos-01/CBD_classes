@@ -35,3 +35,15 @@ match shortest_path = shortestPath((p1:Person)-[*]-(p2:Person)) where p1.name st
 
 #12
 match shortest_path = shortestPath((p1:Person)-[*..2]-(p2:Person {name:'Jim Cash'})) where length(shortest_path) = 2 and p1.name <> p2.name return p1.name, length(shortest_path) as Dimensão
+
+#13
+match shortest_path = shortestPath((p1:Person)-[*]-(p2:Person {name:"Kevin Bacon"})) where p1.name <> p2.name return p1.name as Person, p2.name as Kevin, length(shortest_path) as Dimensão order by Dimensão desc limit 1
+
+#14
+match shortest_path = shortestPath((p1:Person)-[*]-(p2:Person)) where p1.name <> p2.name return p1.name as Person1, p2.name as Person2, length(shortest_path) as Dimensão order by Dimensão desc limit 1
+
+#15
+match shortest_path = shortestPath((p1:Person)-[*]-(p2:Person)) where p1.name <> p2.name return length(shortest_path) as Dimensão, count(*) as num_pares order by Dimensão asc 
+
+#16
+match shortest_path = shortestPath((p1:Person )-[ACTED_IN*]-(p2:Person)) where p1.name <> p2.name return p1.name as Person, avg(length(shortest_path)) as Dimensão_Média ORDER BY Dimensão_Média asc limit 10
