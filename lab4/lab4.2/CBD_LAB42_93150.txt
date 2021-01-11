@@ -26,3 +26,11 @@ match (a)-[:ACTED_IN]->(m) return a,m, avg(m.released - a.born) as idade_media o
 
 #9
 match shortest_path = shortestPath((p1:Person {name:"John Cusack"})-[*]-(p2:Person {name:"Demi Moore"})) return p1.name as Person1, shortest_path, p2.name as Person2;
+
+#10
+match shortest_path = shortestPath((a:Person {name:"Keanu Reeves"})-[*]-(b:Person {name:"Tom Cruise"})) return length(shortest_path) as Dimensão
+
+#11
+match shortest_path = shortestPath((p1:Person)-[*]-(p2:Person)) where p1.name starts with "Jim" and p2.name starts with "Kevin" return p1.name, p2.name, length(shortest_path) as Dimensão order by Dimensão asc limit 1
+
+#12
