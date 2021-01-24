@@ -1,4 +1,61 @@
+// Loading the csv adapting to neo4j
+
 load csv with headers from 'file:///git_selection.csv' as file
 merge (m: member{id:file.svn_id, name:file.real_name})
 merge (p: project{name:file.project_name})
 merge (m) -[:PARTICIPATED_IN{role:file.role_on_project}]-> (p)
+
+// c)
+
+#1
+match (mbr: member) return distinct mbr;
+
+#2
+match (mbr:member) return distinct mbr.name;
+
+#3
+match (mbr:member)-[rel:PARTICIPATED_IN]->(proj:project) with rel, proj, count(mbr) as total_members where total_members >= 1 and rel.role <> "NA" return distinct proj as Project;
+
+#4
+// Liste os utilizadores e total de projetos em que cada um colabora.
+
+match (m:member) -[r:PARTICIPATED_IN]-> (p:project)
+where r.role <> "NA"
+return m.id as member, count(p) as
+number_of_projects
+
+#5
+// Liste os utilizadores e do total de projetos em que cada colabora ordenados por ordem decrescente do total.
+
+match (m:member) -[r:PARTICIPATED_IN]-> (p:project)
+where r.role <> "NA"
+return m.id as member, count(p) as
+number_of_projects
+order by number_of_projects DESC
+
+#6
+// Liste projetos e total de membros em cada projeto.
+
+match (m:member) -[r:PARTICIPATED_IN]-> (p:project)
+return p.name as project, count(r) as number_of_members 
+
+#7
+// Liste projetos e total de membros com a role "Committer" em cada projeto.
+
+match (m:member) -[r:PARTICIPATED_IN]-> (p:project)
+where r.role = "Committer"
+return p.name as project, count(r) as number_of_members 
+
+#8
+// Liste todos os utilizadores que participaram nos mesmo projetos do que o utilizador "atm" (id). Mostre os atributos: nome de "atm", nome utilizador 2, nome do projeto.
+
+match (m1:member {id:"atm"}) -[r1:PARTICIPATED_IN]-> (p:project) <-[r2:PARTICIPATED_IN]- (m2:member)
+where r1.role <> "NA" and r2.role <> "NA"
+return distinct m1.name as member_1, m2.name as member_2, p.name as project_name
+
+#9
+// Liste todos os utilizadores que participaram com a role "Committer" em projetos em que o utilizador "atm" (id1) participou com a role "PMC".
+
+match (m1:member {id:"atm"}) -[r1:PARTICIPATED_IN]-> (p:project) <-[r2:PARTICIPATED_IN]- (m2:member)
+where r1.role = "PMC" and r2.role = "Committer"
+return distinct m2.name as member_2
