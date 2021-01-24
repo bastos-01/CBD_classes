@@ -17,45 +17,19 @@ match (mbr:member) return distinct mbr.name;
 match (mbr:member)-[rel:PARTICIPATED_IN]->(proj:project) with rel, proj, count(mbr) as total_members where total_members >= 1 and rel.role <> "NA" return distinct proj as Project;
 
 #4
-// Liste os utilizadores e total de projetos em que cada um colabora.
-
-match (m:member) -[r:PARTICIPATED_IN]-> (p:project)
-where r.role <> "NA"
-return m.id as member, count(p) as
-number_of_projects
+match (mbr:member)-[rel:PARTICIPATED_IN]->(proj:project) where rel.role <> "NA" return mbr.name as Member, count(proj) as total_projects;
 
 #5
-// Liste os utilizadores e do total de projetos em que cada colabora ordenados por ordem decrescente do total.
-
-match (m:member) -[r:PARTICIPATED_IN]-> (p:project)
-where r.role <> "NA"
-return m.id as member, count(p) as
-number_of_projects
-order by number_of_projects DESC
+match (mbr:member)-[rel:PARTICIPATED_IN]->(proj:project) where rel.role <> "NA" return mbr.name as Member, count(proj) as total_projects order by total_projects desc;
 
 #6
-// Liste projetos e total de membros em cada projeto.
-
-match (m:member) -[r:PARTICIPATED_IN]-> (p:project)
-return p.name as project, count(r) as number_of_members 
+match (mbr:member)-[rel:PARTICIPATED_IN]->(proj:project) return proj.name as Project, count(rel) as total_members; 
 
 #7
-// Liste projetos e total de membros com a role "Committer" em cada projeto.
-
-match (m:member) -[r:PARTICIPATED_IN]-> (p:project)
-where r.role = "Committer"
-return p.name as project, count(r) as number_of_members 
+match (mbr:member)-[rel:PARTICIPATED_IN]->(proj:project) where rel.role = "Committer" return proj.name as Project, rel.role as Role, count(rel) as total_members; 
 
 #8
-// Liste todos os utilizadores que participaram nos mesmo projetos do que o utilizador "atm" (id). Mostre os atributos: nome de "atm", nome utilizador 2, nome do projeto.
-
-match (m1:member {id:"atm"}) -[r1:PARTICIPATED_IN]-> (p:project) <-[r2:PARTICIPATED_IN]- (m2:member)
-where r1.role <> "NA" and r2.role <> "NA"
-return distinct m1.name as member_1, m2.name as member_2, p.name as project_name
+match (mbr1:member {id:"atm"})-[rel1:PARTICIPATED_IN]->(proj:project)<-[rel2:PARTICIPATED_IN]-(mbr2:member) return distinct mbr1.name as atm, mbr2.name as second_member, proj.name as Project;
 
 #9
-// Liste todos os utilizadores que participaram com a role "Committer" em projetos em que o utilizador "atm" (id1) participou com a role "PMC".
-
-match (m1:member {id:"atm"}) -[r1:PARTICIPATED_IN]-> (p:project) <-[r2:PARTICIPATED_IN]- (m2:member)
-where r1.role = "PMC" and r2.role = "Committer"
-return distinct m2.name as member_2
+match (mbr1:member {id:"atm"})-[rel1:PARTICIPATED_IN]->(proj:project)<-[rel2:PARTICIPATED_IN]-(mbr2:member) where rel1.role = "PMC" and rel2.role = "Committer" return distinct mbr2.name as second_member, proj.name as Project;
