@@ -1,0 +1,271 @@
+# query1 - Get all nodes on the database
+
+<Record n=<Node id=2 labels=frozenset({'Product'}) properties={'name': 'Debt collection', 'company': 'Security Credit Services, LLC'}>>
+<Record n=<Node id=3 labels=frozenset({'SubProduct'}) properties={'name': 'Other (i.e. phone, health club, etc.)'}>>
+<Record n=<Node id=4 labels=frozenset({'Issue'}) properties={'date': '2017-04-19', 'description': 'Disclosure verification of debt'}>>
+<Record n=<Node id=5 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'WELLS FARGO BANK, NATIONAL ASSOCIATION'}>>
+<Record n=<Node id=6 labels=frozenset({'SubProduct'}) properties={'name': 'Other mortgage'}>>
+<Record n=<Node id=7 labels=frozenset({'Issue'}) properties={'date': '2016-05-18', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record n=<Node id=8 labels=frozenset({'Product'}) properties={'name': 'Bank account or service', 'company': 'UNITED SERVICES AUTOMOBILE ASSOCIATION'}>>
+<Record n=<Node id=9 labels=frozenset({'SubProduct'}) properties={'name': 'Checking account'}>>
+<Record n=<Node id=10 labels=frozenset({'Issue'}) properties={'date': '2017-03-17', 'description': 'Making/receiving payments, sending money'}>>
+<Record n=<Node id=11 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'AMERICAN NEIGHBORHOOD MORTGAGE'}>>
+<Record n=<Node id=12 labels=frozenset({'SubProduct'}) properties={'name': 'Conventional fixed mortgage'}>>
+<Record n=<Node id=13 labels=frozenset({'Issue'}) properties={'date': '2016-11-18', 'description': 'Settlement process and costs'}>>
+<Record n=<Node id=14 labels=frozenset({'Product'}) properties={'name': 'Student loan', 'company': 'AES/PHEAA'}>>
+<Record n=<Node id=15 labels=frozenset({'SubProduct'}) properties={'name': 'Federal student loan servicing'}>>
+<Record n=<Node id=16 labels=frozenset({'Issue'}) properties={'date': '2017-04-15', 'description': 'Dealing with my lender or servicer'}>>
+<Record n=<Node id=17 labels=frozenset({'Product'}) properties={'name': 'Money transfers', 'company': 'SUNTRUST BANKS, INC.'}>>
+<Record n=<Node id=18 labels=frozenset({'SubProduct'}) properties={'name': 'International money transfer'}>>
+<Record n=<Node id=19 labels=frozenset({'Issue'}) properties={'date': '2017-04-20', 'description': 'Fraud or scam'}>>
+<Record n=<Node id=20 labels=frozenset({'Product'}) properties={'name': 'Debt collection', 'company': 'PMGI, LLC'}>>
+<Record n=<Node id=21 labels=frozenset({'Issue'}) properties={'date': '2016-11-17', 'description': 'Disclosure verification of debt'}>>
+<Record n=<Node id=22 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'Ditech Financial LLC'}>>
+<Record n=<Node id=23 labels=frozenset({'SubProduct'}) properties={'name': 'Conventional adjustable mortgage (ARM)'}>>
+<Record n=<Node id=24 labels=frozenset({'Issue'}) properties={'date': '2017-04-17', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record n=<Node id=25 labels=frozenset({'Product'}) properties={'name': 'Bank account or service', 'company': 'U.S. BANCORP'}>>
+<Record n=<Node id=26 labels=frozenset({'SubProduct'}) properties={'name': '(CD) Certificate of deposit'}>>
+<Record n=<Node id=27 labels=frozenset({'Issue'}) properties={'date': '2017-04-22', 'description': 'Account opening, closing, or management'}>>
+<Record n=<Node id=28 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'Shellpoint Partners, LLC'}>>
+<Record n=<Node id=29 labels=frozenset({'Issue'}) properties={'date': '2017-04-14', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record n=<Node id=30 labels=frozenset({'Product'}) properties={'name': 'Debt collection', 'company': 'Rubin & Rothman, LLC'}>>
+<Record n=<Node id=31 labels=frozenset({'Issue'}) properties={'date': '2017-04-18', 'description': 'Disclosure verification of debt'}>>
+<Record n=<Node id=32 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'QUICKEN LOANS, INC.'}>>
+<Record n=<Node id=33 labels=frozenset({'Issue'}) properties={'date': '2017-04-18', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record n=<Node id=34 labels=frozenset({'Product'}) properties={'name': 'Debt collection', 'company': 'CITIBANK, N.A.'}>>
+<Record n=<Node id=35 labels=frozenset({'SubProduct'}) properties={'name': 'Credit card'}>>
+<Record n=<Node id=36 labels=frozenset({'Issue'}) properties={'date': '2017-03-17', 'description': 'Disclosure verification of debt'}>>
+<Record n=<Node id=37 labels=frozenset({'Product'}) properties={'name': 'Student loan', 'company': 'JPMORGAN CHASE & CO.'}>>
+<Record n=<Node id=38 labels=frozenset({'SubProduct'}) properties={'name': 'Non-federal student loan'}>>
+<Record n=<Node id=39 labels=frozenset({'Issue'}) properties={'date': '2017-04-18', 'description': "Can't repay my loan"}>>
+<Record n=<Node id=40 labels=frozenset({'Product'}) properties={'name': 'Debt collection', 'company': 'ONEMAIN FINANCIAL HOLDINGS, LLC.'}>>
+<Record n=<Node id=41 labels=frozenset({'Issue'}) properties={'date': '2017-03-04', 'description': 'Disclosure verification of debt'}>>
+<Record n=<Node id=42 labels=frozenset({'Product'}) properties={'name': 'Bank account or service', 'company': 'BANK OF AMERICA, NATIONAL ASSOCIATION'}>>
+<Record n=<Node id=43 labels=frozenset({'Issue'}) properties={'date': '2017-04-17', 'description': 'Problems caused by my funds being low'}>>
+<Record n=<Node id=44 labels=frozenset({'Product'}) properties={'name': 'Bank account or service', 'company': 'JPMORGAN CHASE & CO.'}>>
+<Record n=<Node id=45 labels=frozenset({'Issue'}) properties={'date': '2017-03-04', 'description': 'Account opening, closing, or management'}>>
+<Record n=<Node id=46 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'Nationwide Biweekly Administration, Inc.'}>>
+<Record n=<Node id=47 labels=frozenset({'Issue'}) properties={'date': '2017-03-27', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record n=<Node id=48 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'OCWEN LOAN SERVICING LLC'}>>
+<Record n=<Node id=49 labels=frozenset({'Issue'}) properties={'date': '2017-04-21', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record n=<Node id=50 labels=frozenset({'Product'}) properties={'name': 'Student loan', 'company': 'Navient Solutions, LLC.'}>>
+ ....
+ ....
+ ....
+ ....
+
+############################################################################################################################################################################################################
+
+# query2 - Get the first 20 Products
+
+<Record p=<Node id=2 labels=frozenset({'Product'}) properties={'name': 'Debt collection', 'company': 'Security Credit Services, LLC'}>>
+<Record p=<Node id=5 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'WELLS FARGO BANK, NATIONAL ASSOCIATION'}>>
+<Record p=<Node id=8 labels=frozenset({'Product'}) properties={'name': 'Bank account or service', 'company': 'UNITED SERVICES AUTOMOBILE ASSOCIATION'}>>
+<Record p=<Node id=11 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'AMERICAN NEIGHBORHOOD MORTGAGE'}>>
+<Record p=<Node id=14 labels=frozenset({'Product'}) properties={'name': 'Student loan', 'company': 'AES/PHEAA'}>>
+<Record p=<Node id=17 labels=frozenset({'Product'}) properties={'name': 'Money transfers', 'company': 'SUNTRUST BANKS, INC.'}>>
+<Record p=<Node id=20 labels=frozenset({'Product'}) properties={'name': 'Debt collection', 'company': 'PMGI, LLC'}>>
+<Record p=<Node id=22 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'Ditech Financial LLC'}>>
+<Record p=<Node id=25 labels=frozenset({'Product'}) properties={'name': 'Bank account or service', 'company': 'U.S. BANCORP'}>>
+<Record p=<Node id=28 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'Shellpoint Partners, LLC'}>>
+<Record p=<Node id=30 labels=frozenset({'Product'}) properties={'name': 'Debt collection', 'company': 'Rubin & Rothman, LLC'}>>
+<Record p=<Node id=32 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'QUICKEN LOANS, INC.'}>>
+<Record p=<Node id=34 labels=frozenset({'Product'}) properties={'name': 'Debt collection', 'company': 'CITIBANK, N.A.'}>>
+<Record p=<Node id=37 labels=frozenset({'Product'}) properties={'name': 'Student loan', 'company': 'JPMORGAN CHASE & CO.'}>>
+<Record p=<Node id=40 labels=frozenset({'Product'}) properties={'name': 'Debt collection', 'company': 'ONEMAIN FINANCIAL HOLDINGS, LLC.'}>>
+<Record p=<Node id=42 labels=frozenset({'Product'}) properties={'name': 'Bank account or service', 'company': 'BANK OF AMERICA, NATIONAL ASSOCIATION'}>>
+<Record p=<Node id=44 labels=frozenset({'Product'}) properties={'name': 'Bank account or service', 'company': 'JPMORGAN CHASE & CO.'}>>
+<Record p=<Node id=46 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'Nationwide Biweekly Administration, Inc.'}>>
+<Record p=<Node id=48 labels=frozenset({'Product'}) properties={'name': 'Mortgage', 'company': 'OCWEN LOAN SERVICING LLC'}>>
+<Record p=<Node id=50 labels=frozenset({'Product'}) properties={'name': 'Student loan', 'company': 'Navient Solutions, LLC.'}>>
+
+############################################################################################################################################################################################################
+
+# query3 - Get the first 50 issues and its related products ordered by latest to earliest
+
+<Record p.name='Bank account or service' i.date='2017-04-22'>
+<Record p.name='Bank account or service' i.date='2017-04-21'>
+<Record p.name='Prepaid card' i.date='2017-04-21'>
+<Record p.name='Student loan' i.date='2017-04-21'>
+<Record p.name='Debt collection' i.date='2017-04-21'>
+<Record p.name='Mortgage' i.date='2017-04-21'>
+<Record p.name='Student loan' i.date='2017-04-20'>
+<Record p.name='Consumer Loan' i.date='2017-04-20'>
+<Record p.name='Money transfers' i.date='2017-04-20'>
+<Record p.name='Debt collection' i.date='2017-04-20'>
+<Record p.name='Bank account or service' i.date='2017-04-20'>
+<Record p.name='Mortgage' i.date='2017-04-20'>
+<Record p.name='Student loan' i.date='2017-04-19'>
+<Record p.name='Mortgage' i.date='2017-04-19'>
+<Record p.name='Consumer Loan' i.date='2017-04-19'>
+<Record p.name='Debt collection' i.date='2017-04-19'>
+<Record p.name='Bank account or service' i.date='2017-04-19'>
+<Record p.name='Mortgage' i.date='2017-04-18'>
+<Record p.name='Other financial service' i.date='2017-04-18'>
+<Record p.name='Bank account or service' i.date='2017-04-18'>
+<Record p.name='Debt collection' i.date='2017-04-18'>
+<Record p.name='Consumer Loan' i.date='2017-04-18'>
+<Record p.name='Money transfers' i.date='2017-04-18'>
+<Record p.name='Student loan' i.date='2017-04-18'>
+<Record p.name='Bank account or service' i.date='2017-04-17'>
+<Record p.name='Mortgage' i.date='2017-04-17'>
+<Record p.name='Consumer Loan' i.date='2017-04-17'>
+<Record p.name='Prepaid card' i.date='2017-04-17'>
+<Record p.name='Debt collection' i.date='2017-04-16'>
+<Record p.name='Bank account or service' i.date='2017-04-16'>
+<Record p.name='Student loan' i.date='2017-04-15'>
+<Record p.name='Bank account or service' i.date='2017-04-15'>
+<Record p.name='Bank account or service' i.date='2017-04-14'>
+<Record p.name='Mortgage' i.date='2017-04-14'>
+<Record p.name='Debt collection' i.date='2017-04-14'>
+<Record p.name='Mortgage' i.date='2017-04-13'>
+<Record p.name='Student loan' i.date='2017-04-13'>
+<Record p.name='Bank account or service' i.date='2017-04-12'>
+<Record p.name='Mortgage' i.date='2017-04-12'>
+<Record p.name='Student loan' i.date='2017-04-11'>
+<Record p.name='Mortgage' i.date='2017-04-11'>
+<Record p.name='Bank account or service' i.date='2017-04-11'>
+<Record p.name='Mortgage' i.date='2017-04-10'>
+<Record p.name='Bank account or service' i.date='2017-04-10'>
+<Record p.name='Student loan' i.date='2017-04-08'>
+<Record p.name='Consumer Loan' i.date='2017-04-08'>
+<Record p.name='Consumer Loan' i.date='2017-04-07'>
+<Record p.name='Bank account or service' i.date='2017-04-07'>
+<Record p.name='Mortgage' i.date='2017-04-07'>
+<Record p.name='Debt collection' i.date='2017-04-07'>
+
+############################################################################################################################################################################################################
+
+# query4 - Get the first 30 issues from the 'Mortage' product ordered by date
+
+<Record i=<Node id=384 labels=frozenset({'Issue'}) properties={'date': '2012-02-16', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=91 labels=frozenset({'Issue'}) properties={'date': '2012-05-17', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=104 labels=frozenset({'Issue'}) properties={'date': '2012-08-21', 'description': 'Other'}>>
+<Record i=<Node id=130 labels=frozenset({'Issue'}) properties={'date': '2012-12-31', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=200 labels=frozenset({'Issue'}) properties={'date': '2013-01-09', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=316 labels=frozenset({'Issue'}) properties={'date': '2013-05-29', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=376 labels=frozenset({'Issue'}) properties={'date': '2013-07-08', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record i=<Node id=352 labels=frozenset({'Issue'}) properties={'date': '2013-12-03', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record i=<Node id=145 labels=frozenset({'Issue'}) properties={'date': '2014-07-06', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record i=<Node id=60 labels=frozenset({'Issue'}) properties={'date': '2014-10-23', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=412 labels=frozenset({'Issue'}) properties={'date': '2016-04-19', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=7 labels=frozenset({'Issue'}) properties={'date': '2016-05-18', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=13 labels=frozenset({'Issue'}) properties={'date': '2016-11-18', 'description': 'Settlement process and costs'}>>
+<Record i=<Node id=139 labels=frozenset({'Issue'}) properties={'date': '2017-03-02', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record i=<Node id=354 labels=frozenset({'Issue'}) properties={'date': '2017-03-04', 'description': 'Settlement process and costs'}>>
+<Record i=<Node id=201 labels=frozenset({'Issue'}) properties={'date': '2017-03-04', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record i=<Node id=72 labels=frozenset({'Issue'}) properties={'date': '2017-03-04', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=342 labels=frozenset({'Issue'}) properties={'date': '2017-03-05', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record i=<Node id=78 labels=frozenset({'Issue'}) properties={'date': '2017-03-10', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=383 labels=frozenset({'Issue'}) properties={'date': '2017-03-14', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=357 labels=frozenset({'Issue'}) properties={'date': '2017-03-15', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=161 labels=frozenset({'Issue'}) properties={'date': '2017-03-16', 'description': 'Application, originator, mortgage broker'}>>
+<Record i=<Node id=351 labels=frozenset({'Issue'}) properties={'date': '2017-03-16', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record i=<Node id=47 labels=frozenset({'Issue'}) properties={'date': '2017-03-27', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record i=<Node id=399 labels=frozenset({'Issue'}) properties={'date': '2017-03-29', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record i=<Node id=197 labels=frozenset({'Issue'}) properties={'date': '2017-03-30', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record i=<Node id=83 labels=frozenset({'Issue'}) properties={'date': '2017-03-31', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=152 labels=frozenset({'Issue'}) properties={'date': '2017-03-31', 'description': 'Loan servicing, payments, escrow account'}>>
+<Record i=<Node id=433 labels=frozenset({'Issue'}) properties={'date': '2017-04-04', 'description': 'Loan modification,collection,foreclosure'}>>
+<Record i=<Node id=103 labels=frozenset({'Issue'}) properties={'date': '2017-04-05', 'description': 'Application, originator, mortgage broker'}>>
+
+############################################################################################################################################################################################################
+
+# query5 - Get the number of issues in '2012-02-16' from the 'Mortgage' product
+
+<Record total_issues=40>
+
+############################################################################################################################################################################################################
+
+# query6 - Get the total of products that have sub products
+
+<Record total_products=1236>
+
+############################################################################################################################################################################################################
+
+# query7 - Get all the issues on products of 'Security Credit Services, LLC' company ordered by inverse date
+
+<Record p.name='Debt collection' i.description='Communication tactics' i.date='2017-04-21'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-04-21'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-04-21'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-04-20'>
+<Record p.name='Debt collection' i.description='Communication tactics' i.date='2017-04-20'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-04-20'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-04-19'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-04-19'>
+<Record p.name='Debt collection' i.description='Communication tactics' i.date='2017-04-19'>
+<Record p.name='Debt collection' i.description='Improper contact or sharing of info' i.date='2017-04-19'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-04-18'>
+<Record p.name='Debt collection' i.description='False statements or representation' i.date='2017-04-18'>
+<Record p.name='Debt collection' i.description='Communication tactics' i.date='2017-04-18'>
+<Record p.name='Debt collection' i.description='Improper contact or sharing of info' i.date='2017-04-18'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-04-18'>
+<Record p.name='Debt collection' i.description='Taking/threatening an illegal action' i.date='2017-04-18'>
+<Record p.name='Debt collection' i.description='False statements or representation' i.date='2017-04-16'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-04-16'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-04-14'>
+<Record p.name='Debt collection' i.description='Communication tactics' i.date='2017-04-14'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-04-07'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-04-06'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-04-05'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-04-04'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-04-03'>
+<Record p.name='Debt collection' i.description='False statements or representation' i.date='2017-04-03'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-03-31'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-03-23'>
+<Record p.name='Debt collection' i.description='Taking/threatening an illegal action' i.date='2017-03-21'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-03-19'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-03-17'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-03-13'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-03-10'>
+<Record p.name='Debt collection' i.description='False statements or representation' i.date='2017-03-09'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-03-08'>
+<Record p.name='Debt collection' i.description='Communication tactics' i.date='2017-03-08'>
+<Record p.name='Debt collection' i.description='Communication tactics' i.date='2017-03-07'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-03-07'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-03-05'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-03-04'>
+<Record p.name='Debt collection' i.description='Improper contact or sharing of info' i.date='2017-03-04'>
+<Record p.name='Debt collection' i.description='Communication tactics' i.date='2017-03-04'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2017-03-04'>
+<Record p.name='Debt collection' i.description='Taking/threatening an illegal action' i.date='2017-03-04'>
+<Record p.name='Debt collection' i.description='Improper contact or sharing of info' i.date='2017-03-01'>
+<Record p.name='Debt collection' i.description='Improper contact or sharing of info' i.date='2017-02-28'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-02-28'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2017-01-06'>
+<Record p.name='Debt collection' i.description='Improper contact or sharing of info' i.date='2016-12-28'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2016-11-27'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2016-11-25'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2016-11-17'>
+<Record p.name='Debt collection' i.description='False statements or representation' i.date='2016-09-01'>
+<Record p.name='Debt collection' i.description='False statements or representation' i.date='2016-07-26'>
+<Record p.name='Debt collection' i.description='Taking/threatening an illegal action' i.date='2016-06-28'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2016-05-06'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2016-03-25'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2016-03-03'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2015-12-17'>
+<Record p.name='Debt collection' i.description='Improper contact or sharing of info' i.date='2015-11-10'>
+<Record p.name='Debt collection' i.description='Disclosure verification of debt' i.date='2015-03-02'>
+<Record p.name='Debt collection' i.description='Taking/threatening an illegal action' i.date='2014-12-20'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2014-07-19'>
+<Record p.name='Debt collection' i.description="Cont'd attempts collect debt not owed" i.date='2013-07-18'>
+
+############################################################################################################################################################################################################
+
+# query8 - Get the number of different dates a issue was writen
+
+<Record total_different_dates=83>
+
+############################################################################################################################################################################################################
+
+# query9 - Get the number of issues from products that have subproducts
+
+<Record total_issues_subproducts=35>
+
+############################################################################################################################################################################################################
+
+# query10 - Get the average text size of the issues writen for the 'Student loan' product
+
+<Record Product='Student loan' Issue_Description_Size=28.166666666666657 total_issues=8>
+
+
